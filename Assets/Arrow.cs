@@ -67,6 +67,7 @@ public class Arrow : MonoBehaviour
                 {
                     _rigidBody.interpolation = RigidbodyInterpolation.None;
                     transform.parent = hitInfo.transform;
+                  
                     body.AddForce(_rigidBody.velocity, ForceMode.Impulse);
                 }
                 Stop();

@@ -42,6 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1769337598482281036}
+  - component: {fileID: 4899080674496586959}
   m_Layer: 0
   m_Name: Tip
   m_TagString: Untagged
@@ -64,6 +65,20 @@ Transform:
   m_Father: {fileID: 1769337597633466026}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4899080674496586959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769337598482281027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da66b6450b9ce747b92a088efef0219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  tip: {fileID: 1769337598482281036}
 --- !u!1001 &258617463687783894
 PrefabInstance:
   m_ObjectHideFlags: 0
