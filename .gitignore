@@ -81,3 +81,113 @@ Thumbs.db.meta
 # VS Code
 *.vscode
 pxr_driver_sdk.log
+PICO Unity Integration SDK_215/SpatialAuido/Plugins/Win/x64/PicoAmbisonicDecoder.dll
+PICO Unity Integration SDK_215/SpatialAuido/Plugins/Win/x64/PicoAmbisonicDecoder.dll.meta
+PICO Unity Integration SDK_215/SpatialAuido/Plugins/Win/x64/PicoSpatializer.dll
+PICO Unity Integration SDK_215/SpatialAuido/Plugins/Win/x64/PicoSpatializer.dll.meta
+PICO Unity Integration SDK_215/SpatialAuido/Prefabs.meta
+PICO Unity Integration SDK_215/SpatialAuido/Prefabs/PicoSoundReflectionObject.prefab
+PICO Unity Integration SDK_215/SpatialAuido/Prefabs/PicoSoundReflectionObject.prefab.meta
+PICO Unity Integration SDK_215/SpatialAuido/Runtime.meta
+PICO Unity Integration SDK_215/SpatialAuido/Runtime/PXR_Audio_Spatializer_AmbisonicSource.cs
+PICO Unity Integration SDK_215/SpatialAuido/Runtime/PXR_Audio_Spatializer_AmbisonicSource.cs.meta
+PICO Unity Integration SDK_215/SpatialAuido/Runtime/PXR_Audio_Spatializer_API.cs
+PICO Unity Integration SDK_215/SpatialAuido/Runtime/PXR_Audio_Spatializer_API.cs.meta
+PICO Unity Integration SDK_215/SpatialAuido/Runtime/PXR_Audio_Spatializer_AudioListener.cs
+PICO Unity Integration SDK_215/SpatialAuido/Runtime/PXR_Audio_Spatializer_AudioListener.cs.meta
+PICO Unity Integration SDK_215/SpatialAuido/Runtime/PXR_Audio_Spatializer_AudioSource.cs
+PICO Unity Integration SDK_215/SpatialAuido/Runtime/PXR_Audio_Spatializer_AudioSource.cs.meta
+PICO Unity Integration SDK_215/SpatialAuido/Runtime/PXR_Audio_Spatializer_Context.cs
+PICO Unity Integration SDK_215/SpatialAuido/Runtime/PXR_Audio_Spatializer_Context.cs.meta
+PICO Unity Integration SDK_215/SpatialAuido/Runtime/PXR_Audio_Spatializer_SceneGeometry.cs
+PICO Unity Integration SDK_215/SpatialAuido/Runtime/PXR_Audio_Spatializer_SceneGeometry.cs.meta
+PICO Unity Integration SDK_215/SpatialAuido/Runtime/PXR_Audio_Spatializer_SceneMaterial.cs
+PICO Unity Integration SDK_215/SpatialAuido/Runtime/PXR_Audio_Spatializer_SceneMaterial.cs.meta
+PICO Unity Integration SDK_215/SpatialAuido/Runtime/PXR_Audio_Spatializer_Types.cs
+PICO Unity Integration SDK_215/SpatialAuido/Runtime/PXR_Audio_Spatializer_Types.cs.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/audio.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/audio/loop_48k.wav
+PICO Unity Integration SDK_215/SpatialAuido/Samples/audio/loop_48k.wav.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/audio/loop_FOA_48k.wav
+PICO Unity Integration SDK_215/SpatialAuido/Samples/audio/loop_FOA_48k.wav.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/audio/speech_48k.wav
+PICO Unity Integration SDK_215/SpatialAuido/Samples/audio/speech_48k.wav.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material/green_house.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material/green_house/glass.mat
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material/green_house/glass.mat.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material/green_house/marble.mat
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material/green_house/marble.mat.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material/green_house/stone.mat
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material/green_house/stone.mat.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material/green_house/wood.mat
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material/green_house/wood.mat.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material/sami_logo.mat
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material/sami_logo.mat.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material/sami_logo.png
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material/sami_logo.png.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material/unity_logo.jpg
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material/unity_logo.jpg.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material/unity_logo.mat
+PICO Unity Integration SDK_215/SpatialAuido/Samples/material/unity_logo.mat.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/mixers.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/mixers/Ambisonic_bus.mixer
+PICO Unity Integration SDK_215/SpatialAuido/Samples/mixers/Ambisonic_bus.mixer.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/model.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/model/green_house.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/model/green_house/green_house.prefab
+PICO Unity Integration SDK_215/SpatialAuido/Samples/model/green_house/green_house.prefab.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/Pico.Spatializer.Example.asmdef
+PICO Unity Integration SDK_215/SpatialAuido/Samples/Pico.Spatializer.Example.asmdef.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/SampleScene_env_acoustics_10_source_music.unity
+PICO Unity Integration SDK_215/SpatialAuido/Samples/SampleScene_env_acoustics_10_source_music.unity.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/SampleScene_env_acoustics_1_source_music.unity
+PICO Unity Integration SDK_215/SpatialAuido/Samples/SampleScene_env_acoustics_1_source_music.unity.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/SampleScene_env_acoustics_2_source_music.unity
+PICO Unity Integration SDK_215/SpatialAuido/Samples/SampleScene_env_acoustics_2_source_music.unity.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/SampleScene_freefield_10_sources.unity
+PICO Unity Integration SDK_215/SpatialAuido/Samples/SampleScene_freefield_10_sources.unity.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/SampleScene_freefield_1_source_music.unity
+PICO Unity Integration SDK_215/SpatialAuido/Samples/SampleScene_freefield_1_source_music.unity.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/SampleScene_freefield_2_source_music.unity
+PICO Unity Integration SDK_215/SpatialAuido/Samples/SampleScene_freefield_2_source_music.unity.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/SampleScene_freefield_ambisonic_source_music.unity
+PICO Unity Integration SDK_215/SpatialAuido/Samples/SampleScene_freefield_ambisonic_source_music.unity.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/scripts.meta
+PICO Unity Integration SDK_215/SpatialAuido/Samples/scripts/plastic_fps_controller.cs
+PICO Unity Integration SDK_215/SpatialAuido/Samples/scripts/plastic_fps_controller.cs.meta
+PICO Unity Live Preview Plugin (Experiment)/Editor.meta
+PICO Unity Live Preview Plugin (Experiment)/Editor/PXR_PTMetadata.cs
+PICO Unity Live Preview Plugin (Experiment)/Editor/PXR_PTMetadata.cs.meta
+PICO Unity Live Preview Plugin (Experiment)/Editor/Unity.XR.PICO.LivePreview.Editor.asmdef
+PICO Unity Live Preview Plugin (Experiment)/Editor/Unity.XR.PICO.LivePreview.Editor.asmdef.meta
+PICO Unity Live Preview Plugin (Experiment)/package.json
+PICO Unity Live Preview Plugin (Experiment)/package.json.meta
+PICO Unity Live Preview Plugin (Experiment)/Runtime.meta
+PICO Unity Live Preview Plugin (Experiment)/Runtime/InputSystem.meta
+PICO Unity Live Preview Plugin (Experiment)/Runtime/InputSystem/DeviceLayouts.cs
+PICO Unity Live Preview Plugin (Experiment)/Runtime/InputSystem/DeviceLayouts.cs.meta
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Scripts.meta
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Scripts/PXR_PTLoader.cs
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Scripts/PXR_PTLoader.cs.meta
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Scripts/PXR_PTPlugin.cs
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Scripts/PXR_PTPlugin.cs.meta
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Scripts/PXR_PTSettings.cs
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Scripts/PXR_PTSettings.cs.meta
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Unity.XR.PICO.LivePreview.asmdef
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Unity.XR.PICO.LivePreview.asmdef.meta
+PICO Unity Live Preview Plugin (Experiment)/Runtime/UnitySubsystemsManifest.json
+PICO Unity Live Preview Plugin (Experiment)/Runtime/UnitySubsystemsManifest.json.meta
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Windows.meta
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Windows/x64.meta
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Windows/x64/libusb-1.0.dll
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Windows/x64/libusb-1.0.dll.meta
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Windows/x64/pxr_base.dll
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Windows/x64/pxr_base.dll.meta
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Windows/x64/pxr_driver_sdk.dll
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Windows/x64/pxr_driver_sdk.dll.meta
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Windows/x64/pxr_rpc.dll
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Windows/x64/pxr_rpc.dll.meta
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Windows/x64/PxrLivePreview.dll
+PICO Unity Live Preview Plugin (Experiment)/Runtime/Windows/x64/PxrLivePreview.dll.meta
