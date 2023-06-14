@@ -8,7 +8,7 @@ public class Arrow : MonoBehaviour
 {
     public float speed = 10f;
     public Transform tip;
-
+    
     private Rigidbody _rigidBody;
     private bool _inAir = false;
     private Vector3 _lastPosition = Vector3.zero;
@@ -67,11 +67,12 @@ public class Arrow : MonoBehaviour
                 {
                     _rigidBody.interpolation = RigidbodyInterpolation.None;
                     transform.parent = hitInfo.transform;
+                  
                     body.AddForce(_rigidBody.velocity, ForceMode.Impulse);
                 }
                 Stop();
             }
-        }
+        }   
     }
 
     private void Stop()
@@ -84,7 +85,7 @@ public class Arrow : MonoBehaviour
     {
         _rigidBody.useGravity = usePhysics;
         _rigidBody.isKinematic = !usePhysics;
-
+        
     }
 
 }
