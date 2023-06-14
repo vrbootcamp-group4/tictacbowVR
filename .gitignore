@@ -80,3 +80,4 @@ Thumbs.db.meta
 
 # VS Code
 *.vscode
+pxr_driver_sdk.log
