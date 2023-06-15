@@ -81,3 +81,7 @@ Thumbs.db.meta
 # VS Code
 *.vscode
 pxr_driver_sdk.log
+Assets/Resources/PicoSdkPCConfig.json
+Assets/Resources/PicoSdkPCConfig.json.meta
+Assets/Resources/PXR_ProjectSetting.asset
+*.json

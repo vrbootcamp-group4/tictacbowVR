@@ -40,7 +40,6 @@ public class PullInteraction : XRBaseInteractable
     
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
     {
-        Debug.Log("ProcessInteractable");
         base.ProcessInteractable(updatePhase);
         if (updatePhase == XRInteractionUpdateOrder.UpdatePhase.Dynamic)
         {
