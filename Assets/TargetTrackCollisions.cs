@@ -12,7 +12,7 @@ public class TargetTrackCollisions : MonoBehaviour
    
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Bow")
+        if (collision.gameObject.tag == "Arrow")
         {
             board.UpdateOwner(value);
         }

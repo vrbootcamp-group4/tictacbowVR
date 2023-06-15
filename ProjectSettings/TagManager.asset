@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RightHand
   - Bow
+  - Arrow
   layers:
   - Default
   - TransparentFX
