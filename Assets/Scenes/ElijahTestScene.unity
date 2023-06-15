@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 530416724}
-  value: 0
+  value: 3
 --- !u!64 &2442873
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -660,7 +660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 530416724}
-  value: 0
+  value: 8
 --- !u!64 &167308649
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -696,7 +696,6 @@ MonoBehaviour:
   currOwner: 0
   currPlayer: 0
   display: {fileID: 3257074}
-  id: 0
   currVal: 0
 --- !u!1 &226512204 stripped
 GameObject:
@@ -716,7 +715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 530416724}
-  value: 0
+  value: 5
 --- !u!64 &226512212
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1012,7 +1011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 530416724}
-  value: 0
+  value: 12
 --- !u!64 &428024200
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2110,7 +2109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 530416724}
-  value: 0
+  value: 2
 --- !u!64 &526115979
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2146,7 +2145,6 @@ MonoBehaviour:
   currOwner: 0
   currPlayer: 0
   display: {fileID: 0}
-  id: 0
   currVal: 0
 --- !u!1 &545120615 stripped
 GameObject:
@@ -2290,7 +2288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 530416724}
-  value: 0
+  value: 1
 --- !u!64 &593394015
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2389,7 +2387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 530416724}
-  value: 0
+  value: 13
 --- !u!64 &859826711
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2549,7 +2547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 530416724}
-  value: 0
+  value: 4
 --- !u!64 &1092860157
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2582,7 +2580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 530416724}
-  value: 0
+  value: 7
 --- !u!64 &1093406329
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2926,7 +2924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 530416724}
-  value: 0
+  value: 11
 --- !u!64 &1383979175
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2959,7 +2957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 530416724}
-  value: 0
+  value: 9
 --- !u!64 &1505540560
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3182,7 +3180,6 @@ MonoBehaviour:
   currOwner: 0
   currPlayer: 0
   display: {fileID: 0}
-  id: 0
   currVal: 0
 --- !u!1 &1796410019 stripped
 GameObject:
@@ -3202,7 +3199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 530416724}
-  value: 0
+  value: 10
 --- !u!64 &1796410027
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3312,7 +3309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 530416724}
-  value: 0
+  value: 6
 --- !u!64 &2103614196
 MeshCollider:
   m_ObjectHideFlags: 0
