@@ -19,7 +19,7 @@ public class Board : MonoBehaviour
     public int currVal = 0;
 
     // Start is called before the first frame update
-
+    /*
     void Awake()
     {
         GameManager.OnGameStateChanged += GameManager_OnGameStateChanged;
@@ -38,7 +38,7 @@ public class Board : MonoBehaviour
         }
     }
     
-
+    */
     public void UpdateOwner(int newValue)
     {
         if (newValue > currVal) 

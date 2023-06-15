@@ -10,9 +10,7 @@ public class Arrow : MonoBehaviour
     private bool _inAir = false;
     private Vector3 _lastPosition = Vector3.zero;
 
-
-    private ParticleSystem _particleSystem;
-    private TrailRenderer _trailRenderer;
+    public TrailRenderer trailRenderer;
 
     private void Awake()
     {
@@ -32,7 +30,7 @@ public class Arrow : MonoBehaviour
         gameObject.transform.parent = null;
         _inAir = true;
         SetPhysics(true);
-        _rigidBody.AddForce(transform.forward * speed * value, ForceMode.Impulse);
+        _rigidBody.AddForce(transform.forward * speed * value * 1.5f, ForceMode.Impulse);
 
         StartCoroutine(RotateWithVelocity());
 
@@ -53,35 +51,26 @@ public class Arrow : MonoBehaviour
     {
         if (_inAir)
         {
-            CheckCollision();
             _lastPosition = tip.position;
         }
     }
 
-    private void CheckCollision()
+    void OnCollisionEnter(Collision collision)
     {
-        if (Physics.Linecast(_lastPosition, tip.position, out RaycastHit hitInfo))
+        if (collision.transform.TryGetComponent(out Rigidbody body))
         {
-            if (hitInfo.transform.gameObject.layer != 8)
-            {
-                if (hitInfo.transform.TryGetComponent(out Rigidbody body))
-                {
-                    _rigidBody.interpolation = RigidbodyInterpolation.None;
-                    transform.parent = hitInfo.transform;
-                  
-                    body.AddForce(_rigidBody.velocity, ForceMode.Impulse);
-                }
-                Stop();
-            }
-        }   
+            _rigidBody.interpolation = RigidbodyInterpolation.None;
+            transform.parent =  collision.transform;
+
+            body.AddForce(_rigidBody.velocity, ForceMode.Impulse);
+        }
+        Stop();
     }
 
     private void Stop()
     {
         _inAir = false;
         SetPhysics(false);
-
-        _trailRenderer.emitting = false;
     }
 
     private void SetPhysics(bool usePhysics)

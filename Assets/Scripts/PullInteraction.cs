@@ -14,7 +14,6 @@ public class PullInteraction : XRBaseInteractable
 
     protected override void Awake()
     {
-        Debug.Log("Awake");
         base.Awake();
         _lineRenderer = GetComponent<LineRenderer>();
     }
@@ -25,7 +24,6 @@ public class PullInteraction : XRBaseInteractable
     }
     public void Release()
     {
-        Debug.Log("Release");
         PullActionReleased?.Invoke(pullAmount);
         pullingInteractor = null; 
         pullAmount = 0f; 
@@ -43,7 +41,6 @@ public class PullInteraction : XRBaseInteractable
         {
             if (isSelected)
             {
-                Debug.Log("ProcessInteractableSelected");
                 Vector3 pullPosition = pullingInteractor.transform.position;
                 pullAmount = CalculatePull(pullPosition);
                 UpdateString();
@@ -56,7 +53,6 @@ public class PullInteraction : XRBaseInteractable
 
     private float CalculatePull(Vector3 pullPosition)
     {
-        Debug.Log("CalculatePull");
         Vector3 pullDirection = pullPosition - start.position;
         Vector3 targetDirection = end.position - start.position;
         float maxlength = targetDirection.magnitude;
@@ -67,7 +63,6 @@ public class PullInteraction : XRBaseInteractable
     }
     private void UpdateString()
     {
-        Debug.Log("UpdateString");
         Vector3 linePosition = Vector3.forward * Mathf.Lerp(start.transform.localPosition.z, end.transform.localPosition.z, pullAmount); 
         notch.transform.localPosition = new Vector3(notch.transform.localPosition.x, notch.transform.localPosition.y, linePosition.z + .2f); 
         _lineRenderer.SetPosition(1, linePosition);
@@ -76,8 +71,11 @@ public class PullInteraction : XRBaseInteractable
 
     private void PlayReleaseSound()
     {
-        _audioSource.Stop();
-        _audioSource.Play();
+        if (_audioSource != null)
+        {
+            _audioSource.Stop();
+            _audioSource.Play();
+        }
     }
 
     private void HapticFeedback()
