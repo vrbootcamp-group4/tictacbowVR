@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     public bool arrowIsReleased;
     public float currTime;
 
+    private string selectedBoardName;
+    public GameObject selectedBoard;
+
     private void OnCollisionEnter(Collision collision)
     {
         
@@ -65,6 +68,23 @@ public class GameManager : MonoBehaviour
         }
 
         OnGameStateChanged?.Invoke(newState);
+    }
+
+    public void SetSelectedBoard(string name)
+    {
+        selectedBoardName = name;
+        CalculateWinState();
+    }
+
+    private void CalculateWinState()
+    {
+        for (int i = 0; i < targetBoardArray.Length; i++)
+        {
+            if (targetBoardArray[i].name == selectedBoardName)
+            {
+                selectedBoard = targetBoardArray[i];
+            }
+        }
     }
 
     private void SetPlayer1Turn()
