@@ -10,6 +10,7 @@ public class PullInteraction : XRBaseInteractable
     public float pullAmount { get; private set; } = 0.0f; 
     private LineRenderer _lineRenderer; 
     private IXRSelectInteractor pullingInteractor = null;
+    private AudioSource _audioSource;
 
     protected override void Awake()
     {
@@ -19,7 +20,6 @@ public class PullInteraction : XRBaseInteractable
     }
     public void SetPullInteractor(SelectEnterEventArgs args)
     {
-        Debug.Log("SetPullInteractor");
         Debug.Log(args.interactorObject);
         pullingInteractor = args.interactorObject;
     }
@@ -31,12 +31,13 @@ public class PullInteraction : XRBaseInteractable
         pullAmount = 0f; 
         notch.transform.localPosition = new Vector3(notch.transform.localPosition.x, notch.transform.localPosition.y, 0f);
         UpdateString();
+
+        PlayReleaseSound();
     }
            
     
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
     {
-        Debug.Log("ProcessInteractable");
         base.ProcessInteractable(updatePhase);
         if (updatePhase == XRInteractionUpdateOrder.UpdatePhase.Dynamic)
         {
@@ -46,6 +47,7 @@ public class PullInteraction : XRBaseInteractable
                 Vector3 pullPosition = pullingInteractor.transform.position;
                 pullAmount = CalculatePull(pullPosition);
                 UpdateString();
+                HapticFeedback();
             }
         }
 
@@ -72,4 +74,21 @@ public class PullInteraction : XRBaseInteractable
     }
 
 
+    private void PlayReleaseSound()
+    {
+        _audioSource.Stop();
+        _audioSource.Play();
     }
+
+    private void HapticFeedback()
+    {
+        if (pullingInteractor != null)
+        {
+            ActionBasedController currentController = pullingInteractor.transform.gameObject.GetComponent<ActionBasedController>();
+            Debug.Log(pullingInteractor.transform.gameObject.GetComponent<ActionBasedController>());
+            currentController.SendHapticImpulse(pullAmount, .1f);
+        }
+    }
+
+
+}
