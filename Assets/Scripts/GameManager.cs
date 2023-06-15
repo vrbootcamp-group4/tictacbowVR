@@ -5,12 +5,19 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
+
     public GameObject[] targetBoardArray;
 
     public TextMeshProUGUI currentPlayerText;
     public bool player1Active;
     public bool player2Active;
     public Material handleMat;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
