@@ -1,7 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting.Dependencies.Sqlite;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Arrow : MonoBehaviour
@@ -12,6 +9,10 @@ public class Arrow : MonoBehaviour
     private Rigidbody _rigidBody;
     private bool _inAir = false;
     private Vector3 _lastPosition = Vector3.zero;
+
+
+    private ParticleSystem _particleSystem;
+    private TrailRenderer _trailRenderer;
 
     private void Awake()
     {
@@ -79,6 +80,8 @@ public class Arrow : MonoBehaviour
     {
         _inAir = false;
         SetPhysics(false);
+
+        _trailRenderer.emitting = false;
     }
 
     private void SetPhysics(bool usePhysics)
