@@ -82,7 +82,18 @@ public class GameManager : MonoBehaviour
         {
             if (targetBoardArray[i].name == selectedBoardName)
             {
+<<<<<<< Updated upstream
                 selectedBoard = targetBoardArray[i];
+=======
+                if (selectedBoard.GetComponent<Board>().currOwner == Board.Owner.Red)
+                {
+                    board[i + 1] = '1';
+                }
+                if (selectedBoard.GetComponent<Board>().currOwner == Board.Owner.Blue)
+                {
+                    board[i + 1] = '2';
+                }
+>>>>>>> Stashed changes
             }
         }
     }
