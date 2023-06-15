@@ -35,12 +35,21 @@ public class Toggler : MonoBehaviour
             toggle.transform.localScale = new Vector3(1, 1, 1);
             visible = true;
         }
-        else if (!isPressed && visible)
+        else if (visible)
         {
-            toggle.transform.localScale = new Vector3(0, 0, 0);
-            visible = false;
+            ScoreUpdate();
+            if (!isPressed)
+            {
+                toggle.transform.localScale = new Vector3(0, 0, 0);
+                visible = false;
+            }
         }
         Debug.Log("isPressed: " + isPressed);
         Debug.Log("visible: " + visible);
+    }
+
+    void ScoreUpdate()
+    {
+
     }
 }
