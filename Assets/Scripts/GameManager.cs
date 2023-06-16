@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,12 @@ public class GameManager : MonoBehaviour
 
     public static event Action<GameState> OnGameStateChanged;
 
+    public GameObject easyBoard;
+    public GameObject hardBoard;
+    public GameObject extremeBoard;
+    public GameObject[] easyBoardArray;
+    public GameObject[] hardBoardArray;
+    public GameObject[] extremeBoardArray;
     public GameObject[] targetBoardArray;
 
     public TextMeshProUGUI currentPlayerText;
@@ -54,6 +61,7 @@ public class GameManager : MonoBehaviour
         switch (newState)
         {
             case GameState.SelectMode:
+                ActivateEasyBoard();
                 break;
             case GameState.Player1Turn:
                 SetPlayer1Turn();
@@ -68,13 +76,70 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.GameOver:
                 break;
-            case GameState.ExitGame:
+            case GameState.Reset:
+                SceneManager.LoadScene("0");
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
         }
 
         OnGameStateChanged?.Invoke(newState);
+    }
+
+    public void ActivateEasyBoard()
+    {
+        easyBoard.SetActive(true);
+        hardBoard.SetActive(false);
+        extremeBoard.SetActive(false);
+        SetCurrentBoardArray();
+    }
+
+    public void ActivateHardBoard()
+    {
+        easyBoard.SetActive(false);
+        hardBoard.SetActive(true);
+        extremeBoard.SetActive(false);
+        SetCurrentBoardArray();
+    }
+
+    public void ActivateExtremeBoard()
+    {
+        easyBoard.SetActive(false);
+        hardBoard.SetActive(false);
+        extremeBoard.SetActive(true);
+        SetCurrentBoardArray();
+    }
+
+    public void SetCurrentBoardArray()
+    {
+        if (easyBoard.activeSelf)
+        {
+            for (int i = 0; i < easyBoardArray.Length; i++)
+            {
+                targetBoardArray[i] = easyBoardArray[i];
+            }
+        }
+
+        if (hardBoard.activeSelf)
+        {
+            for (int i = 0; i < hardBoardArray.Length; i++)
+            {
+                targetBoardArray[i] = hardBoardArray[i];
+            }
+        }
+
+        if (extremeBoard.activeSelf)
+        {
+            for (int i = 0; i < extremeBoardArray.Length; i++)
+            {
+                targetBoardArray[i] = extremeBoardArray[i];
+            }
+        }
+    }
+
+    public void StartGame()
+    {
+        UpdateGameState(GameState.Player1Turn);
     }
 
     private void SetPlayer1Turn()
@@ -216,6 +281,6 @@ public class GameManager : MonoBehaviour
         Calculate,
         Restart,
         GameOver, 
-        ExitGame,
+        Reset,
     }
 }
