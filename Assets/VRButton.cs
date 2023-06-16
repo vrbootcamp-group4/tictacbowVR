@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+
 
 public class VRButton : MonoBehaviour
 {
@@ -12,6 +14,8 @@ public class VRButton : MonoBehaviour
 
     //public Unity Events we can use in the editor and tie other functions to.
     public UnityEvent onPressed, onReleased;
+
+
 
     //Checks if the current collider entering is the Button and sets off OnPressed event.
     private void OnTriggerEnter(Collider other)
@@ -31,6 +35,7 @@ public class VRButton : MonoBehaviour
         {
             onReleased?.Invoke();
             Debug.Log("I have been released");
+            SceneManager.LoadScene("JasonTest");
             StartCoroutine(WaitForDeadTime());
         }
     }
