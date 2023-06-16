@@ -7,10 +7,8 @@ using TMPro;
 public class GridUpdate : MonoBehaviour
 {
 
-    public GameObject[] slots;
     public GameObject[] player1;
     public GameObject[] player2;
-    public Board[] tictactoe;
     void Awake()
     {
         GameManager.OnGameStateChanged += GameManager_OnGameStateChanged;
@@ -20,11 +18,23 @@ public class GridUpdate : MonoBehaviour
     {
         if (state == GameManager.GameState.Calculate)
         {
-            for (int i = 0; i < 3; i++) 
+            for (int i = 0; i < 9; i++) 
             {
-                for (int j = 0; j < 3; j++) 
+                GameObject curr = GameManager.Instance.targetBoardArray[i];
+                if (curr.GetComponent<Board>().currOwner == Board.Owner.Red) 
                 {
-                    if ()
+                    player1[i].SetActive(true);
+                    player2[i].SetActive(false);
+                }
+                else if (curr.GetComponent<Board>().currOwner == Board.Owner.Blue)
+                {
+                    player1[i].SetActive(false);
+                    player2[i].SetActive(true);
+                }
+                else 
+                {
+                    player1[i].SetActive(false);
+                    player2[i].SetActive(false);
                 }
             }
         }
