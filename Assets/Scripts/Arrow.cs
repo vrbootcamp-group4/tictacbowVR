@@ -69,13 +69,19 @@ public class Arrow : MonoBehaviour
         {
             if (GameManager.Instance.player1Active)
             {
-                GameManager.Instance.UpdateGameState(GameManager.GameState.Player2Turn);
+                if(!GameManager.Instance.player1Wins && !GameManager.Instance.player2Wins)
+                {
+                    GameManager.Instance.UpdateGameState(GameManager.GameState.Player2Turn);
+                }
                 StartCoroutine(DelayedDestroy());
             }
 
             else if (GameManager.Instance.player2Active)
             {
-                GameManager.Instance.UpdateGameState(GameManager.GameState.Player1Turn);
+                if (!GameManager.Instance.player1Wins && !GameManager.Instance.player2Wins)
+                {
+                    GameManager.Instance.UpdateGameState(GameManager.GameState.Player1Turn);
+                }
                 StartCoroutine(DelayedDestroy());
             }
         }

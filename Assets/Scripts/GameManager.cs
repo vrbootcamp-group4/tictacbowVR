@@ -146,14 +146,20 @@ public class GameManager : MonoBehaviour
     {
         player1Active = true;
         player2Active = false;
-        currentPlayerText.text = "Player 1";
+        if (!player1Wins && !player2Wins)
+        {
+            currentPlayerText.text = "Player 1";
+        }
     }
 
     private void SetPlayer2Turn()
     {
         player2Active = true;
         player1Active = false;
-        currentPlayerText.text = "Player 2";
+        if (!player1Wins && !player2Wins)
+        {
+            currentPlayerText.text = "Player 2";
+        }
     }
 
     public void SetArrowReleased(bool isReleased) 
@@ -222,6 +228,7 @@ public class GameManager : MonoBehaviour
                         //winText.gameObject.SetActive(true);
                         gameFinished = true;
                         player1Wins = true;
+                        currentPlayerText.text = "Player 1 wins!";
                         UpdateGameState(GameState.GameOver);
                     }
                 }
@@ -234,6 +241,7 @@ public class GameManager : MonoBehaviour
                         //winText.gameObject.SetActive(true);
                         gameFinished = true;
                         player2Wins = true;
+                        currentPlayerText.text = "Player 2 wins!";
                         UpdateGameState(GameState.GameOver);
                     }
                 }
