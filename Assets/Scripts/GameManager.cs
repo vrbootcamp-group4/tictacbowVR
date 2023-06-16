@@ -137,6 +137,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void RestartGameByeBye()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void StartGame()
     {
         UpdateGameState(GameState.Player1Turn);
