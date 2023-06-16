@@ -64,7 +64,28 @@ public class Arrow : MonoBehaviour
 
             body.AddForce(_rigidBody.velocity, ForceMode.Impulse);
         }
+
+        if (collision.gameObject.tag == "Ground")
+        {
+            if (GameManager.Instance.player1Active)
+            {
+                GameManager.Instance.UpdateGameState(GameManager.GameState.Player2Turn);
+                StartCoroutine(DelayedDestroy());
+            }
+
+            else if (GameManager.Instance.player2Active)
+            {
+                GameManager.Instance.UpdateGameState(GameManager.GameState.Player1Turn);
+                StartCoroutine(DelayedDestroy());
+            }
+        }
         Stop();
+    }
+
+    IEnumerator DelayedDestroy()
+    {
+        yield return new WaitForSeconds(0.1f);
+        Destroy(this.gameObject);
     }
 
     private void Stop()

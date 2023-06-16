@@ -14,6 +14,7 @@ public class TargetTrackCollisions : MonoBehaviour
     {
         if (collision.gameObject.tag == "Arrow")
         {
+            Debug.Log("UpdateOwner");
             board.UpdateOwner(value);
         }
     }

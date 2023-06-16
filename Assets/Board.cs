@@ -43,12 +43,35 @@ public class Board : MonoBehaviour
             currVal = newValue;
             if (currOwner != currPlayer) 
             {
+                Debug.Log("Update Game");
                 currOwner = currPlayer;
                 // Update the owner status by sending a command to the gameManager
                 GameManager.Instance.UpdateGameState(GameManager.GameState.Calculate);
                 GameManager.Instance.SetSelectedBoard(this.gameObject.name);
+
+                if (currPlayer == Owner.Red)
+                {
+                    GameManager.Instance.UpdateGameState(GameManager.GameState.Player2Turn);
+                }
+
+                else if (currPlayer == Owner.Blue)
+                {
+                    GameManager.Instance.UpdateGameState(GameManager.GameState.Player1Turn);
+                }
             }
         }
 
+        else
+        {
+            if (currPlayer == Owner.Red)
+            {
+                GameManager.Instance.UpdateGameState(GameManager.GameState.Player2Turn);
+            }
+
+            else if (currPlayer == Owner.Blue)
+            {
+                GameManager.Instance.UpdateGameState(GameManager.GameState.Player1Turn);
+            }
+        }
     }
 }

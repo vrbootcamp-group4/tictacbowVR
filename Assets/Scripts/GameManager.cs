@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
                 SetPlayer2Turn();
                 break;
             case GameState.Calculate:
-                CalculateWinState();
+                //CalculateWinState();
                 break;
             case GameState.Restart:
                 break;
@@ -184,10 +184,14 @@ public class GameManager : MonoBehaviour
                 if (player1Active)
                 {
                     UpdateGameState(GameState.Player2Turn);
+                    player1Active = false;
+                    player2Active = true;
                 }
                 else if (player2Active)
                 {
                     UpdateGameState(GameState.Player1Turn);
+                    player1Active = true;
+                    player2Active = false;
                 }
             }
         }  
@@ -205,6 +209,7 @@ public class GameManager : MonoBehaviour
         {
             if (targetBoardArray[i].name == selectedBoardName)
             {
+                Debug.Log("Why");
                 selectedBoard = targetBoardArray[i];
                 if (selectedBoard.GetComponent<Board>().currOwner == Board.Owner.Red)
                 {
@@ -230,8 +235,41 @@ public class GameManager : MonoBehaviour
                         UpdateGameState(GameState.GameOver);
                     }
                 }
+
+                /*else
+                {
+                    if (player1Active)
+                    {
+                        UpdateGameState(GameState.Player2Turn);
+                        Debug.Log("Switch2");
+                    }
+
+                    else if (player2Active)
+                    {
+                        UpdateGameState(GameState.Player1Turn);
+                        Debug.Log("Switch1");
+                    }
+                }*/
             }
+
+            /*else
+            {
+                if (player1Active)
+                {
+                    UpdateGameState(GameState.Player2Turn);
+                    Debug.Log("Switch2Out");
+                }
+
+                else if (player2Active)
+                {
+                    UpdateGameState(GameState.Player1Turn);
+                    Debug.Log("Switch1Out");
+                }
+            }*/
         }
+
+        selectedBoard = null;
+        selectedBoardName = null;
     }
 
     bool CheckWinCondition(string player)

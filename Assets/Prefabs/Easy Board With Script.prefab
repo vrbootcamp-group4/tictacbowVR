@@ -391,8 +391,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  currOwner: 0
-  currPlayer: 0
+  currOwner: 2
+  currPlayer: 2
   display: {fileID: 0}
   currVal: 0
 --- !u!1 &7464900633742347850

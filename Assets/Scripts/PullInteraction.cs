@@ -19,7 +19,6 @@ public class PullInteraction : XRBaseInteractable
     }
     public void SetPullInteractor(SelectEnterEventArgs args)
     {
-        Debug.Log(args.interactorObject);
         pullingInteractor = args.interactorObject;
     }
     public void Release()
@@ -83,7 +82,6 @@ public class PullInteraction : XRBaseInteractable
         if (pullingInteractor != null)
         {
             ActionBasedController currentController = pullingInteractor.transform.gameObject.GetComponent<ActionBasedController>();
-            Debug.Log(pullingInteractor.transform.gameObject.GetComponent<ActionBasedController>());
             currentController.SendHapticImpulse(pullAmount, .1f);
         }
     }
