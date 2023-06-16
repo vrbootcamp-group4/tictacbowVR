@@ -9,6 +9,9 @@ public class GridUpdate : MonoBehaviour
 
     public GameObject[] player1;
     public GameObject[] player2;
+    public TextMeshProUGUI[] p1text;
+    public TextMeshProUGUI[] p2text;
+
     void Awake()
     {
         GameManager.OnGameStateChanged += GameManager_OnGameStateChanged;
@@ -25,11 +28,13 @@ public class GridUpdate : MonoBehaviour
                 {
                     player1[i].SetActive(true);
                     player2[i].SetActive(false);
+                    p1text[i].text = curr.GetComponent<Board>().currVal.ToString();
                 }
                 else if (curr.GetComponent<Board>().currOwner == Board.Owner.Blue)
                 {
                     player1[i].SetActive(false);
                     player2[i].SetActive(true);
+                    p2text[i].text = curr.GetComponent<Board>().currVal.ToString();
                 }
                 else 
                 {
@@ -40,15 +45,4 @@ public class GridUpdate : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

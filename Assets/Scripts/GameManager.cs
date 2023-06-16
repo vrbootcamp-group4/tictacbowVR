@@ -146,12 +146,14 @@ public class GameManager : MonoBehaviour
     {
         player1Active = true;
         player2Active = false;
+        currentPlayerText.text = "Player 1";
     }
 
     private void SetPlayer2Turn()
     {
         player2Active = true;
         player1Active = false;
+        currentPlayerText.text = "Player 2";
     }
 
     public void SetArrowReleased(bool isReleased) 
