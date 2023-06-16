@@ -8,6 +8,8 @@ TagManager:
   - Bow
   - Arrow
   - Ground
+  - Button
+  - Board
   layers:
   - Default
   - TransparentFX
@@ -19,6 +21,13 @@ TagManager:
   - Board
   - User body
   - Ground
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - User body
+  - 
   - 
   - 
   - 
