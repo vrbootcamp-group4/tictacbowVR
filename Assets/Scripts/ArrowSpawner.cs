@@ -7,7 +7,7 @@ public class ArrowSpawner : MonoBehaviour
     public GameObject arrow;
     public GameObject notch;
 
-    private XRGrabInteractable _bow;
+    [SerializeField] private XRGrabInteractable _bow;
     private bool _arrowNotched = false;
     private GameObject _currentArrow;
 
@@ -28,7 +28,7 @@ public class ArrowSpawner : MonoBehaviour
     {
         if (_bow.isSelected && !_arrowNotched)
         {
-            StartCoroutine("DelayedSpawn");
+            StartCoroutine(DelayedSpawn());
         }
         if (!_bow.isSelected)
         {
@@ -44,10 +44,10 @@ public class ArrowSpawner : MonoBehaviour
         _currentArrow = null;
     }
 
-    IEnumerable DelayedSpawn()
+    IEnumerator DelayedSpawn()
     {
         _arrowNotched = true;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         _currentArrow = Instantiate(arrow, notch.transform);
     }
 }

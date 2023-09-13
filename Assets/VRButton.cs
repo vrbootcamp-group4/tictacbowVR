@@ -35,7 +35,6 @@ public class VRButton : MonoBehaviour
         {
             onReleased?.Invoke();
             Debug.Log("I have been released");
-            SceneManager.LoadScene("JasonTest");
             StartCoroutine(WaitForDeadTime());
         }
     }

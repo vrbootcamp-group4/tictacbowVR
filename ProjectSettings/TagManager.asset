@@ -5,12 +5,22 @@ TagManager:
   serializedVersion: 2
   tags:
   - RightHand
+  - Bow
+  - Arrow
+  - Ground
   - Button
   - Board
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
+  - Bow
+  - Water
+  - UI
+  - Arrow
+  - Board
+  - User body
+  - Ground
   - 
   - Water
   - UI
